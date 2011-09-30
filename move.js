@@ -614,6 +614,8 @@
 
     // emit "end" when complete
     setTimeout(function(){
+      self.setVendorProperty('transform', null);
+      self.setVendorProperty('transition-property', null);
       self.emit('end');
     }, this._duration);
 
